@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.phonegap.helloworld" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+    <name>Hello World</name>
+    <description>
+        Hello World sample application that responds to the deviceready event.
+    </description>
+    <author email="support@phonegap.com" href="http://phonegap.com">
+        PhoneGap Team
+    </author>
+    <content src="index.html" />
+	
+	 <preference name="permissions"                value="none"/>
+		  <uses-permission android:name="android.permission.CAMERA"/>
+          <uses-permission android:name="android.permission.VIBRATE"/>
+          <uses-permission android:name="android.permission.INTERNET"/>
+		 
+	 <gap:plugin name="com.phonegap.plugins.barcodescanner" version="2.0.0" />
+
+	
+  
+	
+	<source-file src="src/android/com/mirasense/scanditsdk/plugin/ScanditSDK.java" target-dir="src/com/mirasense/scanditsdk/plugin"/>
+    <source-file src="src/android/com/mirasense/scanditsdk/plugin/ScanditSDKActivity.java" target-dir="src/com/mirasense/scanditsdk/plugin"/>
+    <source-file src="src/android/com/mirasense/scanditsdk/plugin/ScanditSDKResultRelay.java" target-dir="src/com/mirasense/scanditsdk/plugin"/>
+	
+	
+	
+    <access origin="*" />
+</widget>

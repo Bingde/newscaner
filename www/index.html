@@ -26,19 +26,16 @@
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width;" />
         <link rel="stylesheet" type="text/css" href="css/index.css" />
         <title>Scandit SDK</title>
-
+        <script type="text/javascript" src="cordova.js"></script>
+       // <script type="text/javascript" src="js/index.js"></script>
     </head>
     <body onload="onBodyLoad()" style="background: url(img/ScanditSDKDemo-Splash.png) no-repeat;background-size: 100%;background-color:  green">
-        <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
-        document.addEventListener("deviceready", onDeviceReady, false);
-function onDeviceReady() {
-    console.log(navigator.camera);
-}
-navigator.camera.getPicture( cameraSuccess, cameraError, cameraOptions );
+       
+        
+
         <div align="center" valign="center"> 
 		    
-            <input type="button" value="scan" onclick="scan()" style="margin-top: 230px; width: 100px; height: 30px; font-size: 1em"/>
+            <input type="button" value="scan" onclick=" cordova.plugins.barcodeScanner.scan()" style="margin-top: 230px; width: 100px; height: 30px; font-size: 1em"/>
 	
        </div>	
 		<p id="demo" align ="center" valign ="center"></p>
@@ -55,52 +52,17 @@ navigator.camera.getPicture( cameraSuccess, cameraError, cameraOptions );
                 document.addEventListener("deviceready", onDeviceReady, false);
 				
             }
-
-        function success(resultArray) {
-		
-		
-         //document.write(resultArray[0]);
-		 //alert("Scanned " + resultArray[0]);
-        //alert("Scanned " + resultArray[0] + " code: " + resultArray[1]);
-		
-		     var links = new Array();
-			 var linkURL = new Array();
-			 links[0]="Search";
-		     linkURL[0]=resultArray[0];
-			 
-				 document.getElementById("demo").innerHTML = resultArray[0];
-				  document.getElementById("demo1").innerHTML = links[0].link(linkURL[0]);
-            	    //document.getElementById("demo1").innerHTML = "links[0].link(linkURL[0])";
-                    // document.write(links[0].link(linkURL[0])); 
-		
-					}
-	
-        //document.write("resultArray");
-		
-                // NOTE: Scandit SDK Phonegap Plugin Versions 1.* for iOS report
-                // the scanning result as a concatenated string.
-                // Starting with version 2.0.0, the Scandit SDK Phonegap
-                // Plugin for iOS reports the result as an array
-                // identical to the way the Scandit SDK plugin for Android reports results.
-
-                // If you are running the Scandit SDK Phonegap Plugin Version 1.* for iOS,
-                // use the following approach to generate a result array from the string result returned:
-                // resultArray = result.split("|");
-   
-            function failure(error) {
-                alert("Failed: " + error);
-            }
-
-            function scan() {
-                // See below for all available options.
-                cordova.exec(success, failure, "ScanditSDK", "scan",
-                             ["p0+0pIssvw/mTlUqNSO5dsX9NapeZDazV/tsNMzYsPM",
-                              {"beep": true,
-                              "1DScanning" : true,
-                              "2DScanning" : true}]);
-                             }
-
-            app.initialize();
+        cordova.plugins.barcodeScanner.scan(
+      function (result) {
+          alert("We got a barcode\n" +
+                "Result: " + result.text + "\n" +
+                "Format: " + result.format + "\n" +
+                "Cancelled: " + result.cancelled);
+      }, 
+      function (error) {
+          alert("Scanning failed: " + error);
+      }
+   );
             </script>
 
 
