@@ -50,7 +50,7 @@
 		 
 
     <!-- Plugins -->
-	<gap:plugin name="com.phonegap.plugins.barcodescanner" version="2.0.0" />
+	<gap:plugin name="com.phonegap.plugins.barcodescanner" version="2.2.0" />
     <gap:plugin name="com.google.cordova.admob" source="plugins.cordova.io"/>
     <!-- Core plugins -->
    
