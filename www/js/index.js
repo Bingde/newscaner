@@ -31,9 +31,9 @@
 			 links[0]="Search";
 		     linkURL[0]= result.text;
 			 
-				 document.getElementById("demo3").innerHTML = result.text;
-				  document.getElementById("demo4").innerHTML = links[0].link(linkURL[0]);
-		
+				// document.getElementById("demo3").innerHTML = result.text;
+				//  document.getElementById("demo4").innerHTML = links[0].link(linkURL[0]);
+		 <p><a href="#" class="topcoat-button" onclick="window.open('linkURL[0]', '_system', 'location=yes');">System Browser</a></p>
 		
 		
             alert("We got a barcode\n" + 
