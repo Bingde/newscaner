@@ -105,9 +105,9 @@ var app = {
             document.getElementById("info").innerHTML = result.text;
             console.log(result);
             
-            if (args.format == "QR_CODE") {
-                window.plugins.childBrowser.showWebPage(args.text, { showLocationBar: false });
-            }
+            if (result.format == "QR_CODE") {
+                window.plugins.childBrowser.showWebPage(result.text, { showLocationBar: false });
+                                              }
             
 
         }, function (error) { 
