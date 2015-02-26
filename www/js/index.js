@@ -25,10 +25,19 @@
 	 
 		//var newarray = result.text;
 		//alert(newarray);
+
+		     var links = new Array();
+			 var linkURL = new Array();
+			 links[0]="Search";
+		     linkURL[0]= result.text;
+			 
+				 document.getElementById("demo3").innerHTML = result.text;
+				  document.getElementById("demo4").innerHTML = links[0].link(linkURL[0]);
+		
+		
 		
             alert("We got a barcode\n" + 
             "Result: " + result.text + "\n" + 
-			"Type: " + result.type + "\n" +
             "Format: " + result.format + "\n" + 
             "Cancelled: " + result.cancelled);  
 
