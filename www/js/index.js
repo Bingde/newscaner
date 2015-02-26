@@ -21,8 +21,11 @@
         
         var scanner = cordova.require("cordova/plugin/BarcodeScanner");
 
-        scanner.scan( function (result) { 
-
+     scanner.scan( function (result) { 
+	 
+		//var newarray = result.text;
+		//alert(newarray);
+		
             alert("We got a barcode\n" + 
             "Result: " + result.text + "\n" + 
             "Format: " + result.format + "\n" + 
@@ -35,8 +38,8 @@
             document.getElementById("info").innerHTML = result.text;
             console.log(result);
             /*
-            if (args.format == "QR_CODE") {
-                window.plugins.childBrowser.showWebPage(args.text, { showLocationBar: false });
+            if (result.format == "QR_CODE") {
+                window.plugins.childBrowser.showWebPage(result.text, { showLocationBar: true });
             }
             */
 
