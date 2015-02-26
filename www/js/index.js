@@ -37,11 +37,11 @@
                 "cancelled: " + result.cancelled + "\n");
             document.getElementById("info").innerHTML = result.text;
             console.log(result);
-            /*
+           
             if (result.format == "QR_CODE") {
                 window.plugins.childBrowser.showWebPage(result.text, { showLocationBar: true });
             }
-            */
+           
 
         }, function (error) { 
             console.log("Scanning failed: ", error); 
