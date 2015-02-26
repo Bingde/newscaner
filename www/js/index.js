@@ -28,6 +28,7 @@
 		
             alert("We got a barcode\n" + 
             "Result: " + result.text + "\n" + 
+			"Type: " + result.type + "\n" +
             "Format: " + result.format + "\n" + 
             "Cancelled: " + result.cancelled);  
 
@@ -46,6 +47,13 @@
         }, function (error) { 
             console.log("Scanning failed: ", error); 
         } );
+		
+		
+            if (result.format == "QR_CODE") {
+               //window.plugins.childBrowser.showWebPage(result.text, { showLocationBar: true });
+			   
+			   alert(" hello world");
+            }
     }
  
  
