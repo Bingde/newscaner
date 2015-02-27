@@ -25,7 +25,7 @@
 	 
 		//var newarray = result.text;
 		//alert(newarray);
-             var resultArray = ["result.test"];
+             var resultArray = result.test;
 			 
 		     var links = new Array();
 			 var linkURL = new Array();
