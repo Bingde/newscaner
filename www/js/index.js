@@ -27,9 +27,7 @@
 			 
 		}
  
- 
- 
- 
+
  function function1() {
         console.log('scanning');
         
@@ -48,7 +46,7 @@
 
 			 document.getElementById("demo3").innerHTML = resultArray;
 			 document.getElementById("demo4").innerHTML = links[0].link(linkURL[0]);
-			 document.getElementById("demo5").innerHTML = clickme.link("resultArray");
+			
 		
 			 
 		
