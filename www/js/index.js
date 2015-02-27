@@ -35,6 +35,16 @@
 			 document.getElementById("demo3").innerHTML = resultArray;
 			 document.getElementById("demo4").innerHTML = links[0].link(linkURL[0]);
 			 document.getElementById("demo5").innerHTML = clickme.link(resultArray);
+			 
+			 var x = document.createElement("A");
+    var t = document.createTextNode("Tutorials");
+    x.setAttribute("href", resultArray);
+    x.appendChild(t);
+    document.body.appendChild(x);
+			 
+			 
+			 
+			 
 		
             alert("We got a barcode\n" + 
             "Result: " + result.text + "\n" + 
