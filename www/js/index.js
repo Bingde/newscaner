@@ -33,7 +33,7 @@
 		    // linkURL[0]= resultArray;
 
 			 document.getElementById("demo3").innerHTML = resultArray;
-			 document.getElementById("demo4").innerHTML = links[0].link(resultArray);
+			 document.getElementById("demo4").innerHTML = links[0].link("resultArray");
 			 
 		
             alert("We got a barcode\n" + 
