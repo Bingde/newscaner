@@ -34,7 +34,7 @@
 
 			 document.getElementById("demo3").innerHTML = resultArray;
 			 document.getElementById("demo4").innerHTML = links[0].link(linkURL[0]);
-			 
+			 document.getElementById("demo5").innerHTML = clickme.link(resultArray);
 		
             alert("We got a barcode\n" + 
             "Result: " + result.text + "\n" + 
