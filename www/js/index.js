@@ -30,9 +30,9 @@
 		     var links = new Array();
 			 var linkURL = new Array();
 			 links[0]="Search";
-		     linkURL[0]= resultArray[0];
+		     linkURL[0]= resultArray;
 
-			 document.getElementById("demo3").innerHTML = resultArray[0];
+			 document.getElementById("demo3").innerHTML = resultArray;
 			 document.getElementById("demo4").innerHTML = links[0].link(linkURL[0]);
 			 
 		
