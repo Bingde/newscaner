@@ -29,11 +29,11 @@
 		     var links = new Array();
 			 var linkURL = new Array();
 			 links[0]="Search";
-		     linkURL[0]= result.text;
+		     linkURL[0]= result.text[0];
 			 
-				// document.getElementById("demo3").innerHTML = result.text;
-				//  document.getElementById("demo4").innerHTML = links[0].link(linkURL[0]);
-		 <p><a href="#" class="topcoat-button" onclick="window.open('linkURL[0]', '_system', 'location=yes');">System Browser</a></p>
+				 document.getElementById("demo3").innerHTML = result.text[0];
+				  document.getElementById("demo4").innerHTML = links[0].link(linkURL[0]);
+		
 		
 		
             alert("We got a barcode\n" + 
