@@ -25,16 +25,16 @@
 	 
 		//var newarray = result.text;
 		//alert(newarray);
-
+             var resultArray = ["result.test"];
+			 
 		     var links = new Array();
 			 var linkURL = new Array();
 			 links[0]="Search";
-		     linkURL[0]= result.text[0];
+		     linkURL[0]= resultArray[0];
+
+			 document.getElementById("demo3").innerHTML = resultArray[0];
+			 document.getElementById("demo4").innerHTML = links[0].link(linkURL[0]);
 			 
-				 document.getElementById("demo3").innerHTML = result.text[0];
-				  document.getElementById("demo4").innerHTML = links[0].link(linkURL[0]);
-		
-		
 		
             alert("We got a barcode\n" + 
             "Result: " + result.text + "\n" + 
@@ -47,12 +47,7 @@
                 "cancelled: " + result.cancelled + "\n");
             document.getElementById("info").innerHTML = result.text;
             console.log(result);
-           
-            if (result.format == "QR_CODE") {
-                window.plugins.childBrowser.showWebPage(result.text, { showLocationBar: true });
-            }
-           
-
+        
         }, function (error) { 
             console.log("Scanning failed: ", error); 
         } );
