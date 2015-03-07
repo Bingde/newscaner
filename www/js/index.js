@@ -36,6 +36,15 @@
 		     linkURL[0]= resultArray;
 
 			 document.getElementById("demo3").innerHTML = resultArray;
+			 
+			   for (i=0; i<links.length; i++) {
+			    document.getElementById("demo4").innerHTML = links[0].link(linkURL[0]);
+    //document.write("<li>"+links[i].link(linkURL[i])+"</li>");
+  }
+			 
+			 
+			 
+			 
 			 document.getElementById("demo4").innerHTML = links[0].link(linkURL[0]);
 		
             alert("We got a barcode\n" + 
